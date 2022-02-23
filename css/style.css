@@ -1,7 +1,16 @@
 body {
-    background-color: green;
+    background-color: rgb(135, 177, 135);
+    height: 100vh;
 }
 
-label {
-    display: block;
+h6, h5, h4 {
+    font-family: monospace;
+}
+
+.bg-yellow {
+    background-color: rgb(232, 219, 119);
+}
+
+.bg-vin-white {
+    background-color: rgb(229, 229, 219);
 }

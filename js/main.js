@@ -26,15 +26,15 @@ function calcPrice(event) {
 
 	document.getElementById('name-result').innerHTML = name;
 	document.getElementById('tariffa').innerHTML = selectedAgeText;
-	document.getElementById('price').innerHTML = `${result}&euro;`;
+	document.getElementById('price').innerHTML = `${result}&euro;`.replace('.', ',');
 	document.getElementById('carriage').innerHTML = Math.floor(Math.random() * 10 + 1);
 	document.getElementById('cp').innerHTML = Math.floor(Math.random() * 100000 + 1);
 
-	document.getElementById('ticket').classList.remove('d-none');
+	document.getElementById('ticket').classList.remove('invisible');
 }
 
 function reset() {
-	document.getElementById('ticket').classList.add('d-none');
+	document.getElementById('ticket').classList.add('invisible');
 }
 
 document.getElementById('submit').addEventListener('click', calcPrice);

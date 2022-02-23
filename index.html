@@ -15,7 +15,7 @@
     <title>Online tickets</title>
 </head>
 
-<body>
+<body class="d-flex flex-column justify-content-center">
 
     <main>
         <section id="form" class="container p-3">
@@ -28,12 +28,12 @@
                         <form action="" id="form-inputs">
                             <div class="row text-center justify-content-center mb-4">
                                 <div class="col-3">
-                                    <label for="name" class="mb-3 fw-bold fs-4">Nome Cognome</label>
+                                    <label for="name" class="mb-3 fw-bold fs-4 d-block">Nome Cognome</label>
                                     <input id="name" type="text" class="rounded-2 border-2 border-danger form-control"
                                         required>
                                 </div>
                                 <div class="col-3">
-                                    <label for="km" class="mb-3 fw-bold fs-4">Km da percorrere</label>
+                                    <label for="km" class="mb-3 fw-bold fs-4 d-block">Km da percorrere</label>
                                     <input id="km" type="number" min="1" step="1" value="1"
                                         class="rounded-2 border-2 border-danger form-control">
                                 </div>
@@ -49,8 +49,11 @@
                             </div>
                             <div class="row">
                                 <div class="col-12">
-                                    <button type="submit" class="btn btn-primary me-4" id="submit">Genera</button>
-                                    <button type="reset" class="btn btn-warning" id="reset">Annulla</button>
+                                    <button type="submit"
+                                        class="btn btn-primary me-4 rounded-pill text-uppercase fw-bold"
+                                        id="submit">Genera</button>
+                                    <button type="reset" class="btn btn-warning rounded-pill text-uppercase fw-bold"
+                                        id="reset">Annulla</button>
                                 </div>
                             </div>
                         </form>
@@ -59,7 +62,7 @@
             </div>
         </section>
 
-        <section id="ticket" class="container p-3 d-none">
+        <section id="ticket" class="container p-3 invisible">
             <div class="row text-center">
                 <div class="col-12">
                     <h1 class="text-uppercase fw-bold text-white mb-3">Il tuo biglietto</h1>
@@ -68,28 +71,29 @@
                     <div class="bg-white rounded-3 p-4 shadow-lg">
                         <div class="container-fluid px-3">
                             <div class="row border-2">
-                                <div class="col-3 bg-dark text-white pb-4 pt-3 rounded-start">
-                                    <h4>Nome passeggero</h4>
-                                    <h5 id="name-result">Test</h5>
+                                <div
+                                    class="col-3 d-flex flex-column rounded-start border-dark border justify-content-center bg-yellow">
+                                    <h4 class="fs-5">Nome passeggero</h4>
+                                    <h5 id="name-result" class="fs-2"></h5>
                                 </div>
                                 <div
-                                    class="col-9 bg-white border-top border-end border-bottom border-dark border-2 text-center py-3">
+                                    class="col-9 bg-vin-white border-top border-end border-bottom border-dark border-2 text-center py-3">
                                     <div class="row">
-                                        <div class="col">
-                                            <h5 class="fw-bold mb-5">Offerta</h5>
-                                            <h6 id="tariffa"></h6>
+                                        <div class="col text-start">
+                                            <h5 class="fw-bold mb-5 border-bottom border-danger">Offerta</h5>
+                                            <h6 id="tariffa" class="fst-italic fs-3"></h6>
                                         </div>
-                                        <div class="col-3">
-                                            <h5 class="fw-bold mb-5">Carrozza</h5>
-                                            <h6 id="carriage"></h6>
+                                        <div class="col-2 text-end">
+                                            <h5 class="fw-bold mb-5 border-bottom border-danger">Carrozza</h5>
+                                            <h6 id="carriage" class="fs-3"></h6>
                                         </div>
-                                        <div class="col-3">
-                                            <h5 class="fw-bold mb-5">Codice CP</h5>
-                                            <h6 id="cp"></h6>
+                                        <div class="col-2 text-end">
+                                            <h5 class="fw-bold mb-5 border-danger border-bottom">Codice CP</h5>
+                                            <h6 id="cp" class="fs-3"></h6>
                                         </div>
-                                        <div class="col-3">
-                                            <h5 class="fw-bold mb-5">Costo biglietto</h5>
-                                            <h6 id="price"></h6>
+                                        <div class="col-3 text-end">
+                                            <h5 class="fw-bold mb-5 border-bottom border-danger">Costo biglietto</h5>
+                                            <h6 id="price" class="fs-3"></h6>
                                         </div>
                                     </div>
                                 </div>
