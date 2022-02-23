@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="css/style.css">
+
+
+    <title>Online tickets</title>
+</head>
+
+<body>
+
+    <main>
+        <section id="form" class="container p-3">
+            <div class="row text-center">
+                <div class="col-12">
+                    <h1 class="text-uppercase fw-bold text-white mb-3">calcola il prezzo del tuo biglietto</h1>
+                </div>
+                <div class="col-12">
+                    <div class="bg-white rounded-3 p-4">
+                        <form action="" id="form-inputs">
+                            <div class="row text-center justify-content-center mb-4">
+                                <div class="col-3">
+                                    <label for="name" class="mb-3 fw-bold fs-4">Nome Cognome</label>
+                                    <input id="name" type="text" class="rounded-2 border-2 border-danger form-control"
+                                        required>
+                                </div>
+                                <div class="col-3">
+                                    <label for="km" class="mb-3 fw-bold fs-4">Km da percorrere</label>
+                                    <input id="km" type="number" min="1" step="1" value="1"
+                                        class="rounded-2 border-2 border-danger form-control">
+                                </div>
+                                <div class="col-3">
+                                    <label for="age" class="mb-3 fw-bold fs-4">Tariffa</label>
+                                    <select id="age" class="rounded-2 border-2 border-danger form-select" required>
+                                        <option value="" selected disabled>Seleziona tariffa</option>
+                                        <option value="standard">Standard</option>
+                                        <option value="minorenne">Minorenne</option>
+                                        <option value="over65">Over65</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-12">
+                                    <button type="submit" class="btn btn-primary me-4" id="submit">Genera</button>
+                                    <button type="reset" class="btn btn-warning" id="reset">Annulla</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="ticket" class="container p-3 d-none">
+            <div class="row text-center">
+                <div class="col-12">
+                    <h1 class="text-uppercase fw-bold text-white mb-3">Il tuo biglietto</h1>
+                </div>
+                <div class="col-12">
+                    <div class="bg-white rounded-3 p-4 shadow-lg">
+                        <div class="container-fluid px-3">
+                            <div class="row border-2">
+                                <div class="col-3 bg-dark text-white pb-4 pt-3 rounded-start">
+                                    <h4>Nome passeggero</h4>
+                                    <h5 id="name-result">Test</h5>
+                                </div>
+                                <div
+                                    class="col-9 bg-white border-top border-end border-bottom border-dark border-2 text-center py-3">
+                                    <div class="row">
+                                        <div class="col">
+                                            <h5 class="fw-bold mb-5">Offerta</h5>
+                                            <h6 id="tariffa"></h6>
+                                        </div>
+                                        <div class="col-3">
+                                            <h5 class="fw-bold mb-5">Carrozza</h5>
+                                            <h6 id="carriage"></h6>
+                                        </div>
+                                        <div class="col-3">
+                                            <h5 class="fw-bold mb-5">Codice CP</h5>
+                                            <h6 id="cp"></h6>
+                                        </div>
+                                        <div class="col-3">
+                                            <h5 class="fw-bold mb-5">Costo biglietto</h5>
+                                            <h6 id="price"></h6>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+
+    <script src="js/main.js" type="text/javascript"></script>
+</body>
+
+</html>
